@@ -8,12 +8,15 @@
         body { background: #0c0c0e; color: white; font-family: sans-serif; margin: 0; padding: 20px; display: flex; justify-content: center; }
         .card { background: #1a1a1d; max-width: 500px; width: 100%; border-radius: 20px; padding: 25px; border: 1px solid #333; }
         
-        /* Media sectie */
         .media-container { width: 100%; margin-bottom: 20px; }
         .media-container img, .media-container video { width: 100%; border-radius: 12px; border: 1px solid #444; }
         
         h1 { font-size: 24px; text-transform: uppercase; margin: 15px 0; color: #ff6a00; }
         .price { font-size: 30px; font-weight: bold; margin-bottom: 20px; }
+        
+        .form-group { text-align: left; margin-bottom: 20px; }
+        .form-group label { display: block; color: #ff6a00; font-weight: bold; margin-bottom: 8px; font-size: 14px; }
+        select { width: 100%; padding: 14px; background: #333; color: white; border: 1px solid #ff6a00; border-radius: 8px; font-size: 16px; cursor: pointer; }
         
         .btn-order { background: #ff6a00; color: black; display: block; text-align: center; padding: 18px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 18px; text-transform: uppercase; }
     </style>
@@ -22,7 +25,7 @@
 
 <div class="card">
     <div class="media-container">
-        <img src="logo.jpg" alt="Oranjegloed">
+        <img src="polo.jpg.png" alt="Oranjegloed">
     </div>
 
     <div class="media-container">
@@ -32,7 +35,20 @@
     </div>
 
     <h1>Oranjegloed Tech-Wear</h1>
-    <div class="price">€ 59,95</div>
+    <div class="price">€ 69,95</div>
+
+    <div class="form-group">
+        <label>Selecteer Maat:</label>
+        <select name="maat">
+            <option value="S">Maat S</option>
+            <option value="M">Maat M</option>
+            <option value="L">Maat L</option>
+            <option value="XL">Maat XL</option>
+            <option value="XXL">Maat XXL</option>
+            <option value="XXXL">Maat XXXL</option>
+            <option value="XXXXL">Maat XXXXL</option>
+        </select>
+    </div>
 
     <a href="https://www.paypal.com/ncp/payment/NYM5Q3TPRJRSE" class="btn-order">Nu Bestellen</a>
 </div>
