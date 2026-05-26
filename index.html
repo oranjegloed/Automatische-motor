@@ -3,121 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oranjegloed WK 2026 Supporters Hub | Nederland</title>
+    <title>Oranjegloed | Officieel</title>
     <style>
-        body {
-            background-color: #1a1a1d;
-            color: #ffffff;
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            padding: 30px 15px;
-            margin: 0;
-        }
-        .card {
-            background-color: #222226;
-            border: 2px solid #ff4500;
-            border-radius: 15px;
-            padding: 30px;
-            max-width: 450px;
-            width: 100%;
-            text-align: center;
-            box-shadow: 0 0 20px rgba(255, 69, 0, 0.2);
-            box-sizing: border-box;
-        }
-        .logo-img {
-            width: 100%;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            min-height: 200px;
-            border: 1px solid #ff4500; 
-        }
-        h1 {
-            font-size: 22px;
-            text-transform: uppercase;
-            margin-bottom: 10px;
-            letter-spacing: 1px;
-        }
-        p {
-            font-size: 14px;
-            color: #cccccc;
-            margin-bottom: 25px;
-            line-height: 1.5;
-        }
-        .price {
-            font-size: 36px;
-            color: #ff6a00;
-            font-weight: bold;
-            margin-bottom: 25px;
-        }
-        .form-group {
-            text-align: left;
-            margin-bottom: 25px;
-        }
-        .form-group label {
-            display: block;
-            color: #ff6a00;
-            font-weight: bold;
-            margin-bottom: 8px;
-            text-transform: uppercase;
-            font-size: 13px;
-            letter-spacing: 1px;
-        }
-        select {
-            width: 100%;
-            padding: 14px;
-            background-color: #333333;
-            color: white;
-            border: 1px solid #ff6a00;
-            border-radius: 8px;
-            font-size: 16px;
-            outline: none;
-            cursor: pointer;
-            box-sizing: border-box;
-        }
-        .btn {
-            width: 100%;
-            padding: 16px;
-            background: linear-gradient(90deg, #ffcc00, #ff8c00);
-            color: #000000;
-            border: none;
-            border-radius: 8px;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: 0.2s;
-        }
-        .btn:hover {
-            opacity: 0.9;
-            transform: scale(1.02);
-        }
+        body { background: #0c0c0e; color: white; font-family: sans-serif; margin: 0; padding: 20px; display: flex; justify-content: center; }
+        .card { background: #1a1a1d; max-width: 500px; width: 100%; border-radius: 20px; padding: 25px; border: 1px solid #333; }
+        
+        /* Media sectie */
+        .media-container { width: 100%; margin-bottom: 20px; }
+        .media-container img, .media-container video { width: 100%; border-radius: 12px; border: 1px solid #444; }
+        
+        h1 { font-size: 24px; text-transform: uppercase; margin: 15px 0; color: #ff6a00; }
+        .price { font-size: 30px; font-weight: bold; margin-bottom: 20px; }
+        
+        .btn-order { background: #ff6a00; color: black; display: block; text-align: center; padding: 18px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 18px; text-transform: uppercase; }
     </style>
 </head>
 <body>
 
 <div class="card">
-    <img src="1778574235810.jpg" alt="Oranjegloed" class="logo-img">
-    
-    <h1>OFFICIËLE SUPPORTERS COLLECTIE</h1>
-    <p>Premium, gepatenteerde tech-wear voor de ultieme supporter.<br>Beperkte oplage.</p>
-    
-    <div class="price">€ 59,95</div>
-    
-    <div class="form-group">
-        <label>KIES JE MAAT:</label>
-        <select>
-            <option value="" disabled selected>Maat Selecteren</option>
-            <option value="S">Maat S</option>
-            <option value="M">Maat M</option>
-            <option value="L">Maat L</option>
-            <option value="XL">Maat XL</option>
-            <option value="XXL">Maat XXL</option>
-        </select>
+    <div class="media-container">
+        <img src="logo.jpg" alt="Oranjegloed">
     </div>
-    
-    <a href="https://www.paypal.com/ncp/payment/NYM5Q3TPRJRSE" target="_blank" style="text-decoration: none;">
-        <button class="btn">Bestel Officieel Oranjegloed Shirt</button>
-    </a>
+
+    <div class="media-container">
+        <video controls>
+            <source src="video.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <h1>Oranjegloed Tech-Wear</h1>
+    <div class="price">€ 59,95</div>
+
+    <a href="https://www.paypal.com/ncp/payment/NYM5Q3TPRJRSE" class="btn-order">Nu Bestellen</a>
 </div>
 
 </body>
