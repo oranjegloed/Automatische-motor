@@ -24,7 +24,7 @@
         h1 { font-size: 24px; text-transform: uppercase; color: var(--primary); margin: 20px 0 10px 0; }
         .desc { font-size: 15px; color: #ccc; line-height: 1.6; margin-bottom: 20px; }
         .price { font-size: 32px; font-weight: bold; margin-bottom: 20px; }
-        select { width: 100%; padding: 14px; background: #333; color: white; border: 1px solid var(--primary); border-radius: 8px; font-size: 16px; margin-bottom: 20px; }
+        select { width: 100%; padding: 14px; background: #333; color: white; border: 1px solid var(--primary); border-radius: 8px; font-size: 16px; margin-bottom: 20px; cursor: pointer; }
         .btn-order { background: linear-gradient(90deg, #ff6a00, #ff8c00); color: black; text-align: center; padding: 18px; border-radius: 10px; display: block; text-decoration: none; font-weight: bold; font-size: 18px; text-transform: uppercase; transition: transform 0.2s; }
         .btn-order:hover { transform: scale(1.02); }
     </style>
@@ -57,9 +57,16 @@
 
     <div class="price">€ 69,95</div>
 
-    <label style="color:var(--primary); font-weight:bold;">Kies hier uw maat:</label>
+    <label style="color:var(--primary); font-weight:bold; display:block; margin-bottom: 8px;">Kies hier uw maat:</label>
     <select name="maat">
-        <option>S</option><option>M</option><option>L</option><option>XL</option><option>XXL</option><option>XXXL</option><option>XXXXL</option>
+        <option value="" disabled selected>Kies hier uw maat</option>
+        <option value="S">S</option>
+        <option value="M">M</option>
+        <option value="L">L</option>
+        <option value="XL">XL</option>
+        <option value="XXL">XXL</option>
+        <option value="XXXL">XXXL</option>
+        <option value="XXXXL">XXXXL</option>
     </select>
 
     <a href="https://www.paypal.com/ncp/payment/NYM5Q3TPRJRSE" class="btn-order">Nu Bestellen</a>
