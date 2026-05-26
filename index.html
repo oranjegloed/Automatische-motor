@@ -5,56 +5,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oranjegloed | Officieel</title>
     <style>
-        body { background: #0c0c0e; color: white; font-family: sans-serif; margin: 0; padding: 20px; display: flex; justify-content: center; }
-        .card { background: #1a1a1d; max-width: 500px; width: 100%; border-radius: 20px; padding: 25px; border: 1px solid #333; }
+        :root { --primary: #ff6a00; --bg: #121212; --card: #1e1e1e; }
+        body { background: var(--bg); color: white; font-family: 'Segoe UI', sans-serif; margin: 0; padding: 0; display: flex; flex-direction: column; align-items: center; }
         
-        .media-container { width: 100%; margin-bottom: 20px; }
-        .media-container img { width: 100%; border-radius: 12px; border: 1px solid #444; }
-        
-        h1 { font-size: 24px; text-transform: uppercase; margin: 15px 0; color: #ff6a00; }
-        .desc { font-size: 15px; color: #cccccc; line-height: 1.6; margin-bottom: 20px; }
-        .price { font-size: 30px; font-weight: bold; margin-bottom: 20px; }
-        
-        .form-group { text-align: left; margin-bottom: 20px; }
-        .form-group label { display: block; color: #ff6a00; font-weight: bold; margin-bottom: 8px; font-size: 14px; }
-        select { width: 100%; padding: 14px; background: #333; color: white; border: 1px solid #ff6a00; border-radius: 8px; font-size: 16px; cursor: pointer; }
-        
-        .btn-order { background: #ff6a00; color: black; display: block; text-align: center; padding: 18px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 18px; text-transform: uppercase; }
+        /* Ticker Style */
+        .ticker-wrap { width: 100%; background: var(--primary); color: black; padding: 10px 0; font-weight: bold; overflow: hidden; white-space: nowrap; position: relative; }
+        .ticker { display: inline-block; animation: marquee 15s linear infinite; }
+        @keyframes marquee { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
+
+        /* Countdown Style */
+        .countdown { display: flex; gap: 15px; justify-content: center; margin: 20px 0; }
+        .timer-box { background: #333; padding: 10px; border-radius: 8px; text-align: center; min-width: 60px; }
+        .timer-box span { display: block; font-size: 20px; font-weight: bold; color: var(--primary); }
+        .timer-box label { font-size: 10px; text-transform: uppercase; }
+
+        .card { background: var(--card); max-width: 500px; width: 90%; border-radius: 20px; padding: 25px; margin-top: 10px; border: 1px solid #444; }
+        .media img { width: 100%; border-radius: 12px; }
+        h1 { font-size: 24px; text-transform: uppercase; color: var(--primary); margin: 20px 0 10px 0; }
+        .desc { font-size: 15px; color: #ccc; line-height: 1.6; margin-bottom: 20px; }
+        .price { font-size: 32px; font-weight: bold; margin-bottom: 20px; }
+        select { width: 100%; padding: 14px; background: #333; color: white; border: 1px solid var(--primary); border-radius: 8px; font-size: 16px; margin-bottom: 20px; }
+        .btn-order { background: linear-gradient(90deg, #ff6a00, #ff8c00); color: black; text-align: center; padding: 18px; border-radius: 10px; display: block; text-decoration: none; font-weight: bold; font-size: 18px; text-transform: uppercase; transition: transform 0.2s; }
+        .btn-order:hover { transform: scale(1.02); }
     </style>
 </head>
 <body>
 
+<div class="ticker-wrap">
+    <div class="ticker">
+        ORANJEGLOED TECH-WEAR • WK 2026 EDITIE • BEPAAL JE EIGEN BOODSCHAP • EXCLUSIEF VERKRIJGBAAR
+    </div>
+</div>
+
 <div class="card">
-    <div class="media-container">
+    <div class="media">
         <img src="1778574235810.jpg" alt="Oranjegloed Polo">
     </div>
 
     <h1>Oranjegloed Tech-Wear</h1>
     
+    <div class="countdown" id="timer">
+        <div class="timer-box"><span id="days">00</span><label>Dagen</label></div>
+        <div class="timer-box"><span id="hours">00</span><label>Uur</label></div>
+        <div class="timer-box"><span id="minutes">00</span><label>Min</label></div>
+        <div class="timer-box"><span id="seconds">00</span><label>Sec</label></div>
+    </div>
+
     <p class="desc">
-        De Oranjegloed Tech-Polo combineert maximale bewegingsvrijheid met een strakke, moderne uitstraling. Ontworpen voor de supporter die kwaliteit eist, zowel op de bouwplaats als op de tribune.
-        <br><br>
-        • Premium materiaal: Duurzaam, ademend en gebouwd voor intensief gebruik.<br>
-        • Stijlvol design: Exclusieve look voor het WK 2026.
+        De Oranjegloed Tech-Polo combineert maximale bewegingsvrijheid met een strakke, moderne uitstraling. Bedien de LED-matrix direct vanaf je smartphone en bepaal zelf wat je uitstraalt.
     </p>
 
     <div class="price">€ 69,95</div>
 
-    <div class="form-group">
-        <label>Kies hier uw maat:</label>
-        <select name="maat">
-            <option value="S">S</option>
-            <option value="M">M</option>
-            <option value="L">L</option>
-            <option value="XL">XL</option>
-            <option value="XXL">XXL</option>
-            <option value="XXXL">XXXL</option>
-            <option value="XXXXL">XXXXL</option>
-        </select>
-    </div>
+    <label style="color:var(--primary); font-weight:bold;">Kies hier uw maat:</label>
+    <select name="maat">
+        <option>S</option><option>M</option><option>L</option><option>XL</option><option>XXL</option><option>XXXL</option><option>XXXXL</option>
+    </select>
 
     <a href="https://www.paypal.com/ncp/payment/NYM5Q3TPRJRSE" class="btn-order">Nu Bestellen</a>
 </div>
+
+<script>
+    const deadline = new Date("June 11, 2026 00:00:00").getTime();
+    setInterval(() => {
+        const now = new Date().getTime();
+        const diff = deadline - now;
+        document.getElementById("days").innerText = Math.floor(diff / (1000 * 60 * 60 * 24));
+        document.getElementById("hours").innerText = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        document.getElementById("minutes").innerText = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        document.getElementById("seconds").innerText = Math.floor((diff % (1000 * 60)) / 1000);
+    }, 1000);
+</script>
 
 </body>
 </html>
